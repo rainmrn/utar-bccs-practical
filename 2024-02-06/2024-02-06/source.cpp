@@ -1,5 +1,6 @@
 #include <iostream> 
 #include <iomanip> // for setprecision
+#include <string> 
 
 #define PI 3.14159
 using namespace std;
@@ -33,7 +34,24 @@ void radius()
 
 	cout << fixed;
 	cout << setprecision(2);
-	cout << "Area of circle: " << area << "cm^2" << endl;
+	cout << "Area of circle: " << area << "cm^2\n" << endl;
+}
+
+void weeklyStudyHours()
+{
+	string name;
+	double study_hours;
+
+	cout << "Enter your name: ";
+	cin >> name;
+	cout << endl;
+
+	cout << "Enter the number of hours you have spent to practice programming per day: ";
+	cin >> study_hours;
+	cout << endl;
+
+	cout << "Hello, " << name << "! You are spending " << study_hours * 7
+		<< " hours to practice programming per week." << endl;
 }
 
 int main() 
@@ -44,6 +62,7 @@ int main()
 
 	division();
 	radius();
+	weeklyStudyHours();
 
 	cout << endl;
 
